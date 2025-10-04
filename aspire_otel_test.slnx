@@ -2,6 +2,7 @@
   <Folder Name="/Projektmappenelemente/">
     <File Path=".dockerignore" />
     <File Path=".gitignore" />
+    <File Path="global.json" />
     <File Path="LICENSE" />
     <File Path="README.md" />
   </Folder>

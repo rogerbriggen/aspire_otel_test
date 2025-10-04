@@ -13,10 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET 10 Preview 1
-        uses: actions/setup-dotnet@v4
+      - name: Setup .NET with global.json
+        uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: '10.0.100-rc.1.25451.107'
+          global-json-file: global.json
+          
 
       - name: Restore dependencies
         run: dotnet restore
