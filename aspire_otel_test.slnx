@@ -5,7 +5,9 @@
     <File Path="LICENSE" />
     <File Path="README.md" />
   </Folder>
-  <Folder Name="/Projektmappenelemente/.github/" />
+  <Folder Name="/Projektmappenelemente/.github/">
+    <File Path=".github/dependabot.yml" />
+  </Folder>
   <Folder Name="/Projektmappenelemente/.github/workflows/">
     <File Path=".github/workflows/dotnet10-preview-build.yml" />
   </Folder>
