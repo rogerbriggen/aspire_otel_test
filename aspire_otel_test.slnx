@@ -5,6 +5,10 @@
     <File Path="LICENSE" />
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/Projektmappenelemente/.github/" />
+  <Folder Name="/Projektmappenelemente/.github/workflows/">
+    <File Path=".github/workflows/dotnet10-preview-build.yml" />
+  </Folder>
   <Project Path="aspire_otel_test.AppHost/aspire_otel_test.AppHost.csproj" />
   <Project Path="aspire_otel_test.ServiceDefaults/aspire_otel_test.ServiceDefaults.csproj" />
   <Project Path="aspire_otel_test/aspire_otel_test.csproj" />
