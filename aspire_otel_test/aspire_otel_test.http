@@ -1,0 +1,6 @@
+@aspire_otel_test_HostAddress = http://localhost:5085
+
+GET {{aspire_otel_test_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

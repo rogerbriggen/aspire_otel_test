@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Projektmappenelemente/">
+    <File Path=".dockerignore" />
+    <File Path=".gitignore" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="aspire_otel_test.AppHost/aspire_otel_test.AppHost.csproj" />
+  <Project Path="aspire_otel_test.ServiceDefaults/aspire_otel_test.ServiceDefaults.csproj" />
+  <Project Path="aspire_otel_test/aspire_otel_test.csproj" />
+</Solution>
