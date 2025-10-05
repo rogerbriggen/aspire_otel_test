@@ -15,5 +15,6 @@
   <Project Path="aspire_otel_test.AppHost/aspire_otel_test.AppHost.csproj" />
   <Project Path="aspire_otel_test.ServiceDefaults/aspire_otel_test.ServiceDefaults.csproj" />
   <Project Path="aspire_otel_test/aspire_otel_test.csproj" />
+  <Project Path="log4net2/log4net2.csproj" Id="607dbd8b-2f70-456f-b759-b432ab9e31f4" />
   <Project Path="OtelLib/OtelLib.csproj" Id="124ed96b-cd5f-4784-9b5e-701b58285d81" />
 </Solution>

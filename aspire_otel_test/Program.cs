@@ -1,5 +1,8 @@
 using Serilog;
 using Serilog.Sinks.OpenTelemetry;
+using log4net;
+using log4net.Config;
+using System.IO;
 
 namespace aspire_otel_test;
 
@@ -7,6 +10,9 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        var logRepository = LogManager.GetRepository(System.Reflection.Assembly.GetEntryAssembly());
+        XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
+
         // Configure Serilog from appsettings.json
         Log.Logger = new LoggerConfiguration()
             .ReadFrom.Configuration(new ConfigurationBuilder()

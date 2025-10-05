@@ -1,3 +1,4 @@
+using log4net2;
 using Microsoft.AspNetCore.Mvc;
 
 namespace aspire_otel_test.Controllers;
@@ -24,6 +25,8 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
         })
         .ToArray();
         logger.LogInformation("Generating weather forecast. {@WeatherForecast}", returnValue);
+        Log4NetTest log4NetTest = new();
+        log4NetTest.CreateTestLog();
         return returnValue;
     }
 }
