@@ -1,18 +1,24 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using OtelLib;
+using Serilog;
 
 namespace aspire_otel_test.Controllers;
 
+
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController(ILogger<WeatherForecastController> logger) : ControllerBase
+public class WeatherForecastSerilogController(ILogger<OtelTest> otelTestLogger) : ControllerBase
 {
     private static readonly string[] Summaries =
     [
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     ];
-    private readonly ILogger<WeatherForecastController> logger = logger;
+    private readonly Serilog.ILogger logger = Log.Logger.ForContext<WeatherForecastSerilogController>();
 
-    [HttpGet(Name = "GetWeatherForecast")]
+    
+    private readonly OtelTest otelTest = new(otelTestLogger);
+
+    [HttpGet(Name = "GetWeatherForecastSerilog")]
     public IEnumerable<WeatherForecast> Get()
     {
         
@@ -23,7 +29,8 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
         })
         .ToArray();
-        logger.LogInformation("Generating weather forecast. {@WeatherForecast}", returnValue);
+        otelTest.GenerateMetric(1, "weather_forecast_generated");
+        logger.Information("Generating weather forecast {@WeatherForecast}", returnValue);
         return returnValue;
     }
 }
