@@ -9,6 +9,12 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    groups:
+      microsoft:
+        patterns:
+          - "Microsoft.*"
+          - "System.*"
+          - "Azure.*"
   - package-ecosystem: dotnet-sdk # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
