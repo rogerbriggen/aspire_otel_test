@@ -17,6 +17,7 @@ updates:
           - "Azure.*"
       opentelemetry:
         patterns:
+          - "OpenTelemetry"
           - "OpenTelemetry.*"
   - package-ecosystem: dotnet-sdk # See documentation for possible values
     directory: "/" # Location of package manifests
